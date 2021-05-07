@@ -4,8 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Development</title>
+    <link rel="stylesheet" href="./tyyli.css">
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "flex";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>        
 </head>
 <body>
- <a href="./Harjoitus7.html">Hey</a>
+    <div id="Welcome">
+    <h1 class="whitetext">Welcome! My Greatest works of all time</h1>
+    <h3 class="whitetext">Works with a * are the ones that are responsive</h3>
+</div>
+<div id="flex">
+    <div class="mySlides ">
+        <div class="divit">
+            <div class="div-kuva kuva1"></div>
+            <div class="div-teksti">Syksyn 2020 työ: Kellot soi vai soiko?
+            </div>
+            <div class="nappi"><a href="./Harjoitus7.html">Kellot soi.</a></div>
+        </div>
+
+        <div class="divit">
+            <div class="div-kuva">
+                
+            </div>
+            <div class="nappi">MOI</div>
+        </div>
+
+        <div class="divit">
+            <div class="div-kuva">
+                
+            </div>
+            <div class="nappi">MOI</div>
+        </div>
+    </div>
+    <div class="mySlides ">
+        <div class="divit">
+            <div class="div-kuva" >
+                    
+            </div>
+            <div class="nappi">MOI</div>
+        </div>
+
+        <div class="divit">
+            <div class="div-kuva">
+                    
+            </div>
+            <div class="nappi">MOI</div>
+        </div>
+        <div class="divit">
+            <div class="div-kuva">
+                    
+            </div>
+            <div class="nappi">MOI</div>
+        </div>
+    </div>
+    
+</div>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+<div style="text-align:center">
+     
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+  </div>
 </body>
 </html>

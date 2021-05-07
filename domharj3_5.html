@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+<meta charset="UTF-8">
+<title>DOM harjoitus 3_5</title>
+    <style>
+    #robopaa{ 
+    left: 130px;
+    top: 100px;
+    width: 90px;
+    height:100px;
+    background-color: black;
+    position: relative;
+    background-image:url(./Kuvat/robopaa.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#robottivartalo{ 
+    width: 50px;
+    height:75px;
+    background-color:black;
+    position: relative;
+    top: 100px;
+    left: 150px;
+    
+}
+#kasivasen,#kasioikea{
+    width: 20px;
+    height:60px;
+    background-color: gray;
+    position: relative;
+}
+#kasivasen{
+    left: 130px ;
+    top: 25px;
+}
+#kasioikea{
+      left: 200px;
+      bottom: 35px;
+}
+#jalkaoikea,#jalkavasen{
+    position: relative;
+    background: black;
+    width: 20px;
+    height:60px;
+    bottom: 120px;
+}
+#jalkaoikea{
+    left:150px;
+    bottom: 80px;
+}
+#jalkavasen{
+    left:180px;
+    bottom:20px
+}
+ 
+#robokuva{
+    top: 10%;
+    left: 150px;
+    position: relative;
+    border: black;
+}
+#kokolaatikko{
+    border: solid black 5px;
+    width: 800px;
+    height: 400px;
+    
+}
+</style>
+
+</head>
+<body>
+<script>
+    function robottowalk(){
+        var kerrat = 0
+        const paivitysNopeus = 5;
+        const oikea = 800;
+        let paikkaX = 100;
+        let suuntaX =1
+        var robottivartalo= document.getElementById("robokuva")
+    var idVar =setInterval( () =>{
+            paikkaX = suuntaX + paikkaX
+            if(paikkaX>250 || paikkaX <0){
+                suuntaX=suuntaX*(-1)
+                kerrat++;}
+        
+            robottivartalo.style.left =paikkaX + "px";
+        
+            if(kerrat >= 2){
+            clearInterval(idVar)
+            }
+
+        },paivitysNopeus)
+    }
+
+    function clap(){
+        var kasiv=document.getElementById("kasivasen")
+        var kasio=document.getElementById("kasioikea")
+ 
+    kasiv.style.transform = "rotate(-40deg)"
+    kasio.style.transform = "rotate(40deg)"
+    setTimeout(function(){kasiv.style.transform = "rotate(0deg)"},150)
+    setTimeout(function(){kasio.style.transform = "rotate(0deg)"},150)
+}
+    function wave(){
+    var kasio=document.getElementById("kasioikea")
+    kasio.style.bottom = "70px"
+    kasio.style.transform = "rotate(-120deg)"
+    setTimeout(function(){kasio.style.transform = "rotate(0deg)"},150)
+    setTimeout(function(){kasio.style.bottom = "35px"},150)
+    }
+    function jump(){
+        var kasio=document.getElementById("kasioikea")
+        var kasiv=document.getElementById("kasivasen")
+        var jalkavasen=document.getElementById("jalkavasen")
+        var jalkaoikea=document.getElementById("jalkaoikea")
+        var kerrat = 0
+        const paivitysNopeus = 1;
+        const oikea = 800;
+        let paikkaX = 40;
+        let suuntaX =-1
+        var robottivartalo= document.getElementById("robokuva")
+        var idVar =setInterval( () =>{
+            paikkaX = suuntaX + paikkaX
+            if(paikkaX> 50|| paikkaX < 0){
+                suuntaX=suuntaX*(-1)
+                kerrat++;}
+        
+                robottivartalo.style.top =paikkaX + "px";
+                if(kerrat == 0){
+                kasio.style.transform = "rotate(-120deg)"
+                kasiv.style.transform = "rotate(120deg)"
+                kasio.style.top = "-60px"
+                kasiv.style.top = "5px"
+                jalkaoikea.style.top = "-100px"
+                jalkavasen.style.top = "-50px"
+                jalkaoikea.style.transform = "rotate(-120deg)"
+                jalkavasen.style.transform = "rotate(120deg)"
+                }
+                setTimeout(function(){kasio.style.transform = "rotate(0deg)"},150)
+                setTimeout(function(){kasiv.style.transform = "rotate(0deg)"},150)
+                setTimeout(function(){kasio.style.top = "-35px"},150)
+                setTimeout(function(){kasiv.style.top = "25px"},150)
+                setTimeout(function(){jalkaoikea.style.transform = "rotate(0deg)"},150)
+                setTimeout(function(){jalkavasen.style.transform = "rotate(0deg)"},150)
+                setTimeout(function(){jalkaoikea.style.top = "-80px"},150)
+                setTimeout(function(){jalkavasen.style.top = "-20px"},150)
+        
+                if(kerrat >= 2){
+                clearInterval(idVar)
+            }
+
+        },paivitysNopeus)
+    }
+
+    function tarkistus() {
+            let komento = document.getElementById("komento").value
+            switch(komento) {
+                case "robotto.walk();": robottowalk(); break
+                case "robotto.clap();": clap(); break
+                case "robotto.jumpi();": jump(); break
+                case "robotto.wave();": wave(); break
+            }
+        }
+</script>
+<div id="kokolaatikko">
+    <div id="robokuva">
+    <div id="robopaa"></div>
+    <div id="robottivartalo"></div>
+    <div id="kasivasen"></div>
+    <div id="kasioikea"></div>
+    <div id="jalkavasen"></div>
+    <div id="jalkaoikea"></div>
+    </div>
+</div>
+<textarea name="kentta" id="komento" cols="30" rows="10"></textarea>
+<button onclick="tarkistus()">Lähetä Komento</button>
+</body>
+</html>

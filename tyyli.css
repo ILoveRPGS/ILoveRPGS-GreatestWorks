@@ -1,10 +1,14 @@
 body{
-    background-image: linear-gradient(to right,black 50%,white 50% );
-    mix-blend-mode: difference;
+    background-image: linear-gradient(to right,pink 38%,white 62% );
 }
 h1{
-    color: black;
     font-size: 5vh;
+    color: rgb(19, 44, 1);
+
+}
+h3{
+  font-size: 3vh;
+  color: rgb(19, 44, 1);
 }
 #Welcome{
   position: relative;
@@ -16,7 +20,6 @@ h1{
     width: 20vw;
     height: 20vh;
     position: absolute;
-    mix-blend-mode: normal;
 }
 .kuva1{
     background-image: url(./Kuvat/kellot.JPG);
@@ -27,6 +30,38 @@ h1{
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
 }
+.kuva2{
+  background-image: url(./Kuvat/robotto.JPG);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+.kuva3{
+  background-image: url(./Kuvat/paivakirja.JPG);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+.kuva4{
+  background-image: url(./Kuvat/uutinen.JPG);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+.kuva5{
+  background-image: url(./Kuvat/arvostelu.JPG);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
 .divit{
     height: 40vh;
     width: 20vw;
@@ -34,7 +69,6 @@ h1{
     position: relative;
     border-radius: 1rem;
     background-color: white;
-    mix-blend-mode: difference;
 }
 .div-teksti{
     color: black;
@@ -53,32 +87,31 @@ h1{
     position: relative;
 }
 .whitetext{
-    color: white;
+    mix-blend-mode: difference;
 }
 .nappi{
     display: block;
-    color: black;
+    color: white;
     width: 7vw;
     height: 2vh;
     padding: 2vh;
-    background-color: white;
+    background-color: black;
     border-radius: 0.5rem;
     text-align: center;
-    mix-blend-mode: difference;
     top: 32vh;
     left: 4.5vw;
     position: relative;
     transition: 0.5s ease;
 }
 .nappi:hover{
-    background-color: rgb(255, 255, 255, 0.4);
-    color:  rgba(0, 0, 0, 0.4);
+    background-color:pink;
+    color:  rgb(0, 0, 0);
     
     
 }
 a{
 text-decoration: none;
-color: black;
+color: white;
 }
 .mySlides {
     display: none;
@@ -89,7 +122,22 @@ color: black;
 }
   
   /* Next & previous buttons */
-  .prev, .next {
+  .prev{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: pink;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: white;
+  }
+  .next{
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -102,6 +150,7 @@ color: black;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    background-color: pink;
   }
   
   /* Position the "next button" to the right */
@@ -112,43 +161,21 @@ color: black;
   
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover, .next:hover {
-    background-color: rgba(255,255,255,0.8);
+    background-color:violet
   }
-  
-  /* Caption text */
-  .text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  /* The dots/bullets/indicators */
   .dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #bbb;
+    background-color: pink;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
   }
   
   .active, .dot:hover {
-    background-color: #717171;
+    background-color: white;
   }
   
   /* On smaller screens, decrease text size */

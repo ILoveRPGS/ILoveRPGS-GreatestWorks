@@ -1,0 +1,113 @@
+body
+{
+background-image:url('./kuvat/kuva01.jpg');
+background-repeat:repeat-x;
+background-color:#78c9f8;
+border:0;
+padding:0;
+margin:0;
+text-align:center;
+font-family: 'Yusei Magic', sans-serif;
+}
+
+/* tekstialueet*/
+header{
+height:110px;
+width:80%;
+}
+
+#keskiosa {
+min-height:600px;
+width:80%;
+margin: 15px auto;
+text-align:left;
+}
+
+footer{
+background-image:url('./kuvat/kuva01.jpg');
+background-repeat:repeat-x;
+height:80px;
+width:100%;
+position: absolute;
+bottom: 0;
+}
+
+#kotisivulinkki {
+color:#9ab0f6;
+top:1.0vw;
+left:1.5vw;
+width: 40vw;
+font-size: 3.5em;
+width: 100px;
+height: 100px;
+}
+
+.joo{
+    position: absolute;
+    left: 10vw;
+    top: 1vw;
+}
+
+nav {
+color:#aabaff;
+width: 700px;
+position:absolute;
+top:70px;
+right:10%;
+}
+
+#teksti {
+font-family: 'Roboto', sans-serif;
+color:#000000;
+}
+
+article {
+margin-top:15px;
+margin-bottom:15px;
+}
+/* tekstit ****************************/
+h1 {
+letter-spacing:-1px;
+font-size:1.3em;
+margin-bottom:3px;
+}
+
+h2 {
+font-size:0.8em;
+font-style:italic;
+font-weight:lighter;
+margin-top:3px;
+}
+
+p {
+margin-left:15px; 
+font-size:0.9em;
+}
+
+/* kaikki linkit (linkki kotisivulle, navigointilinkit ja tekstissä olevat linkit*/
+
+a:active.kotilinkki {
+color:#0f0042;
+}
+
+a:hover.kotilinkki {
+color:#0f0042;
+}
+
+a.navilinkki {
+font-size:1.1em;
+letter-spacing:-1px;
+text-decoration:none;
+border-bottom:4px solid #420039;
+margin-left:10px;
+margin-right:10px;
+color:#F7DEF7;
+}
+
+a:active.navilinkki {
+color:#420039;
+}
+
+a:hover.navilinkki {
+color:#420039;
+}

@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.036c4828.css",
-    "main.js": "/static/js/main.544a12f5.js",
-    "static/js/787.390cfc4f.chunk.js": "/static/js/787.390cfc4f.chunk.js",
-    "index.html": "/index.html",
-    "main.036c4828.css.map": "/static/css/main.036c4828.css.map",
-    "main.544a12f5.js.map": "/static/js/main.544a12f5.js.map",
-    "787.390cfc4f.chunk.js.map": "/static/js/787.390cfc4f.chunk.js.map"
+    "main.css": "/ILoveRPGS-GreatestWorks/fanikauppa/static/css/main.036c4828.css",
+    "main.js": "/ILoveRPGS-GreatestWorks/fanikauppa/static/js/main.09ce1d8f.js",
+    "static/js/787.390cfc4f.chunk.js": "/ILoveRPGS-GreatestWorks/fanikauppa/static/js/787.390cfc4f.chunk.js",
+    "index.html": "/ILoveRPGS-GreatestWorks/fanikauppa/index.html",
+    "main.036c4828.css.map": "/ILoveRPGS-GreatestWorks/fanikauppa/static/css/main.036c4828.css.map",
+    "main.09ce1d8f.js.map": "/ILoveRPGS-GreatestWorks/fanikauppa/static/js/main.09ce1d8f.js.map",
+    "787.390cfc4f.chunk.js.map": "/ILoveRPGS-GreatestWorks/fanikauppa/static/js/787.390cfc4f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.036c4828.css",
-    "static/js/main.544a12f5.js"
+    "static/js/main.09ce1d8f.js"
   ]
 }
